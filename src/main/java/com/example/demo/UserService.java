@@ -13,7 +13,7 @@ public class UserService  {
 		this.userMapper = userMapper;
 	}
 
-	@Transactional
+	@Transactional(rollbackFor=Exception.class)
 	public UserProfile addUser(UserProfile user) throws Exception {
 		userMapper.insert(user);
 		addUserToLegacy(user);
@@ -21,6 +21,7 @@ public class UserService  {
 	}
 	
 	private void addUserToLegacy(UserProfile userProfile) throws Exception {
-		//throw new RuntimeException("ERP Exception");
+		//throw new RuntimeException("Legacy Exception");
+		throw new Exception("Legacy Exception");
 	}
 }
