@@ -1,0 +1,15 @@
+CREATE DATABASE mybatis_db DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_general_ci;
+CREATE USER 'mybatis_user'@'%' IDENTIFIED BY 'mybatis1234';
+GRANT ALL ON mybatis_db.* TO 'mybatis_user'@'%';
+
+USE mybatis_db
+
+CREATE TABLE UserProfile (
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(128),
+	email VARCHAR(128),
+	phone VARCHAR(128),
+	address VARCHAR(64),
+	INDEX (name),
+	INDEX (email)
+);
