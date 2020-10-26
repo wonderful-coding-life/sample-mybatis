@@ -22,6 +22,6 @@ public class UserService  {
 	
 	private void addUserToLegacy(UserProfile userProfile) throws Exception {
 		//throw new RuntimeException("Legacy Exception");
-		throw new Exception("Legacy Exception");
+		//throw new Exception("Legacy Exception");
 	}
 }

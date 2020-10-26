@@ -32,6 +32,6 @@ public class UserController {
 	
 	@GetMapping("/user")
 	public List<UserProfile> getUserProfile(@RequestParam(value="keyword", required=false) String keyword, @RequestParam(value="orderBy", required=false) String orderBy) {
-		return userMapper.select(keyword, orderBy);
+		return userMapper.selectAll();
 	}
 }

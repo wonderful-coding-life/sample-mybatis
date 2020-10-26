@@ -6,10 +6,11 @@ USE mybatis_db
 
 CREATE TABLE UserProfile (
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
-	name VARCHAR(128),
-	email VARCHAR(128),
-	phone VARCHAR(128),
-	address VARCHAR(64),
-	INDEX (name),
-	INDEX (email)
+	user_name VARCHAR(128),
+	user_email VARCHAR(128),
+	user_phone VARCHAR(128),
+	user_address VARCHAR(64),
+	INDEX (user_name),
+	INDEX (user_email)
 );
+
