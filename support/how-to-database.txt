@@ -6,11 +6,20 @@ USE mybatis_db
 
 CREATE TABLE UserProfile (
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	company_id INTEGER,
 	user_name VARCHAR(128),
 	user_email VARCHAR(128),
 	user_phone VARCHAR(128),
 	user_address VARCHAR(64),
+	FOREIGN KEY (company_id) REFERENCES CompanyProfile(id),
 	INDEX (user_name),
 	INDEX (user_email)
+);
+
+CREATE TABLE CompanyProfile (
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	company_name VARCHAR(128),
+	company_address VARCHAR(64),
+	INDEX (company_name)
 );
 
