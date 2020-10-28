@@ -22,7 +22,7 @@ public class CompanyMapperTests {
 		List<CompanyProfile> companies = companyMapper.getAll();
 		Assertions.assertThat(companies).isNotNull();
 		
-		CompanyProfile companyInserted = companyMapper.get(company.getId());
+		CompanyProfile companyInserted = companyMapper.getById(company.getId());
 		Assertions.assertThat(companyInserted).isNotNull();
 		Assertions.assertThat(companyInserted.getName()).isEqualTo(company.getName());
 		Assertions.assertThat(companyInserted.getAddress()).isEqualTo(company.getAddress());

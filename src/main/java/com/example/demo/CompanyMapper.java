@@ -25,7 +25,7 @@ public interface CompanyMapper {
 		@Result(property="address", column="company_address"),
 		@Result(property="employees", column="id", many=@Many(select="com.example.demo.UserMapper.getByCompanyId"))
 	})
-	CompanyProfile get(@Param("id") int id);
+	CompanyProfile getById(@Param("id") int id);
 	
 	@Select("SELECT * FROM CompanyProfile")
 	@ResultMap("CompanyProfileMap")
